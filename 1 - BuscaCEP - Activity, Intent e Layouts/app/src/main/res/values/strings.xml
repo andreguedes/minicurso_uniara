@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BuscaCEP</string>
+
+    <string name="act_detalhes_adicionar">ADICIONAR</string>
+    <string name="act_main_segunda">IR PARA PRÓXIMA TELA</string>
+</resources>

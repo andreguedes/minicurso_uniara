@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BuscaCEP</string>
+
+    <!-- MenuAdicionar strings -->
+    <string name="menu_adicionar">Adicionar</string>
+
+    <!-- DetalhesActivity strings -->
+    <string name="act_detalhes_logradouro">Logradouro:</string>
+    <string name="act_detalhes_cidade">Cidade:</string>
+    <string name="act_detalhes_estado">Estado:</string>
+    <string name="act_detalhes_bairro">Bairro:</string>
+    <string name="act_detalhes_cep">CEP:</string>
+    <string name="act_detalhes_adicionar">ADICIONAR</string>
+</resources>
