@@ -19,8 +19,8 @@ Projeto para o minicurso Desenvolvimento Mobile com Android (UNIARA)
   
 <b>Referências:</b>
   - https://developer.android.com/index.html
+  - https://developer.android.com/training/material/theme.html#ColorPalette
   - https://material.io/guidelines/style/typography.html#typography-typeface
   - https://material.io/guidelines/components/buttons.html#
-  - https://developer.android.com/training/material/theme.html#ColorPalette
   - https://material.io/guidelines/style/color.html#color-color-palette
   - https://www.materialpalette.com/deep-orange/cyan
