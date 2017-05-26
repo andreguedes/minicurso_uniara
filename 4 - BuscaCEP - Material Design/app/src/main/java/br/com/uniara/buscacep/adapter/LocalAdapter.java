@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.activeandroid.Model;
@@ -12,6 +13,7 @@ import com.activeandroid.Model;
 import java.util.List;
 
 import br.com.uniara.buscacep.R;
+import br.com.uniara.buscacep.database.dao.LocalDAO;
 import br.com.uniara.buscacep.database.model.Local;
 
 /**
@@ -35,12 +37,21 @@ public class LocalAdapter extends RecyclerView.Adapter<LocalAdapter.LocalViewHol
     }
 
     @Override
-    public void onBindViewHolder(LocalViewHolder holder, int position) {
-        Local local = (Local) locais.get(position);
+    public void onBindViewHolder(final LocalViewHolder holder, final int position) {
+        final Local local = (Local) locais.get(position);
 
         if (local != null) {
             holder.txtCidade.setText(local.getCidade());
             holder.txtCep.setText(local.getCep());
+
+            holder.btnExcluir.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    LocalDAO.getInstance().remove(local);
+                    locais.remove(position);
+                    notifyDataSetChanged();
+                }
+            });
         }
     }
 
@@ -52,12 +63,14 @@ public class LocalAdapter extends RecyclerView.Adapter<LocalAdapter.LocalViewHol
     class LocalViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtCidade, txtCep;
+        ImageButton btnExcluir;
 
         public LocalViewHolder(View itemView) {
             super(itemView);
 
             txtCidade = (TextView) itemView.findViewById(R.id.txtCidade);
             txtCep = (TextView) itemView.findViewById(R.id.txtCep);
+            btnExcluir = (ImageButton) itemView.findViewById(R.id.btnExcluir);
         }
 
     }

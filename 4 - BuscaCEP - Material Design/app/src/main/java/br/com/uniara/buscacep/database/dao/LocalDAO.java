@@ -28,4 +28,8 @@ public class LocalDAO {
         return new Select().all().from(Local.class).execute();
     }
 
+    public void remove(Local local) {
+        local.delete();
+    }
+
 }
